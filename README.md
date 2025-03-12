@@ -1,2 +1,0 @@
-# pokemonlist
-Lista de pokemon 
