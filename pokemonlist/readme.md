@@ -27,8 +27,8 @@ Antes de começar, você precisa ter o Node.js instalado. Caso não tenha, pode 
 ### Clonando o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/pokemon-project.git
-cd pokemon-project
+git clone https://github.com/vctrmacedo/pokemonlist.git
+cd pokemonlist
 ```
 
 ### Instalando as dependências
@@ -47,13 +47,6 @@ npm run serve
 
 Após isso, o projeto estará disponível em `http://localhost:8080`.
 
-## Estrutura do Projeto
-
-- **/src**: Contém todos os arquivos de código-fonte.
-  - **/components**: Componentes Vue.js utilizados para exibir dados de Pokémon.
-  - **/assets**: Arquivos de estilo e outros recursos.
-  - **/views**: Visões principais que compõem a interface do usuário.
-- **/public**: Arquivos estáticos, como o `index.html`.
 
 ## Contribuindo
 
