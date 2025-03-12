@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://www.freepnglogos.com/uploads/pokemon-go-png-logo/pokemon-go-apk-png-logo-9.png">
+</head>
+<body>
+    <div id="app">
+         <h1>Pokémon List</h1>
+         <!-- Campo de busca -->
+         <input type="text" v-model="searchQuery" placeholder="Buscar Pokémon..." @input="searchPokemons" />
+        <div class="cards">
+            <div class="card" v-for="pokemon in paginatedPokemons" :key="pokemon.id">
+                <img :src="pokemon.image" :alt="pokemon.name">
+                <h2>{{ pokemon.name }}</h2>
+                <p>Tipo: {{ pokemon.type }}</p>
+                <p>Peso: {{ pokemon.weight }} kg</p>
+                <p>Altura: {{ pokemon.height }} m</p>
+            </div>
+        </div>
+
+        <!-- Paginação -->
+        <div class="pagination">
+            <button @click="prevPage" :disabled="currentPage === 1">Anterior</button>
+            <span>Página {{ currentPage }} de {{ totalPages }}</span>
+            <button @click="nextPage" :disabled="currentPage === totalPages">Próxima</button>
+        </div>
+    </div>
+    <footer>Este projeto foi desenvolvido apenas para fins de estudo e aprendizado. Nenhuma informação aqui deve ser considerada oficial ou utilizada para fins comerciais. - Dev by Victor Macedo</footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js.js"></script>
+
+</body>
+</html>
+
